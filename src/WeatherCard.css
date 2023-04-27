@@ -1,0 +1,32 @@
+.weather-card {
+    background-color: blue;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    width: 300px;
+  }
+  
+  .weather-card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  
+  .weather-card-header .city {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .weather-card-header .temperature {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .weather-card-body {
+    font-size: 18px;
+  }
+  
+  .weather-card-body .description {
+    margin-bottom: 24px;
+  }
