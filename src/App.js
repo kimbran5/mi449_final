@@ -19,6 +19,8 @@ function App() {
       <header className="App-header">
         <h1>Welcome, {name}!</h1>
       </header>
+      <img src="https://reactjs.org/logo-og.png" alt="React Image" />
+      {/* replace text */}
       <div className="left-column">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id metus non elit pharetra aliquet. Sed at sapien sit amet leo convallis venenatis sit amet et nunc. Quisque ac massa in erat blandit dignissim.</p>
         <p>Duis in magna in quam hendrerit mollis. Nam at neque turpis. Integer ac pellentesque quam. Donec quis fermentum dolor. Fusce quis arcu ipsum.</p>

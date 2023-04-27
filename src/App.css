@@ -8,16 +8,21 @@
   font-size: calc(10px + 2vmin);
   color: white;
   overflow-x: hidden;
+  margin: 0;
 }
 
 .left-column {
-  width: 50%;
+  width: 75%;
   padding-right: 16px;
+  margin-right: 8px;
+  margin-left: 16px;
 }
 
 .right-column {
   width: 50%;
   padding-left: 16px;
+  margin-left: 8px;
+  margin-right: 16px;
 }
 
 .content {
@@ -27,6 +32,8 @@
   width: 100%;
   max-width: 960px;
   margin-top: 32px;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .sidenote {
