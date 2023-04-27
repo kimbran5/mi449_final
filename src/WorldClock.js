@@ -1,33 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import './WorldClock.css';
+import React, { useState } from 'react';
 
-function WorldClock(props) {
+const WorldClock = () => {
+  const [city, setCity] = useState('');
   const [time, setTime] = useState(null);
 
-  useEffect(() => {
-    // Make time API call
-    axios.get(`http://worldtimeapi.org/api/timezone/${props.timezone}`)
-      .then(response => {
-        setTime(response.data.datetime);
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, [props.timezone]);
+  const handleCityChange = (event) => {
+    setCity(event.target.value);
+  };
 
-  if (!time) {
-    return <div>Loading...</div>;
-  }
-
-  const date = new Date(time);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const response = await fetch(`http://worldclockapi.com/api/json/utc/now?location=${encodeURIComponent(city)}`);
+    const data = await response.json();
+    setTime(data.currentDateTime);
+  };
 
   return (
-    <div className="world-clock">
-      <div className="city">{props.city}</div>
-      <div className="time">{date.toLocaleTimeString()}</div>
+    <div>
+      <h2>Time Finder</h2>
+      <form onSubmit={handleSubmit}>
+        <label>
+          City:
+          <input type="text" value={city} onChange={handleCityChange} />
+        </label>
+        <button type="submit">Find Time</button>
+      </form>
+      {time && (
+        <p>{`${city}: ${time}`}</p>
+      )}
     </div>
   );
-}
+};
 
 export default WorldClock;
