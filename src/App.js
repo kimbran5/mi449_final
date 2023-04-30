@@ -38,7 +38,7 @@ function App() {
       </div>
       <div className="right-column">
         <p className="sidenote">Change the wallpaper using the "Prev" and "Next" buttons!</p>
-        <p className="sidenote">News source: News API</p>
+        <p className="sidenote">News source: New York Times</p>
       </div>
 
       <div className="content">
