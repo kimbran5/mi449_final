@@ -3,36 +3,46 @@ import './App.css';
 import WeatherCard from './WeatherCard';
 import CurrentTime from './CurrentTime';
 import NewsFeed from './NewsFeed';
+import ImageGallery from './ImageGallery';
 
 function App() {
   const [name, setName] = useState('');
+  const [timeOfDay, setTimeOfDay] = useState('');
 
   useEffect(() => {
     const enteredName = prompt("Please enter your name:");
     if (enteredName) {
       setName(enteredName);
     }
+    const currentTime = new Date().getHours();
+    if (currentTime < 12) {
+      setTimeOfDay('morning');
+    } else if (currentTime < 18) {
+      setTimeOfDay('afternoon');
+    } else {
+      setTimeOfDay('night');
+    }
   }, []);
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome, {name}!</h1>
+        <h1>Good {timeOfDay}, {name}!</h1>
       </header>
-      <img src="https://reactjs.org/logo-og.png" alt="React Image" />
-      {/* replace text */}
+      <CurrentTime />
+      <ImageGallery />
       <div className="left-column">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id metus non elit pharetra aliquet. Sed at sapien sit amet leo convallis venenatis sit amet et nunc. Quisque ac massa in erat blandit dignissim.</p>
-        <p>Duis in magna in quam hendrerit mollis. Nam at neque turpis. Integer ac pellentesque quam. Donec quis fermentum dolor. Fusce quis arcu ipsum.</p>
+        <p>Welcome, {name} to your personal dashboard!</p>
+        <p>Stay up-to-date with the latest news, stay on schedule with the current time, and plan your day with the latest weather updates.</p>
+        <p>Our dashboard is designed to be informative and easy to use, so feel free to take your time and explore all the features. We hope you find everything you need and more!</p>
       </div>
       <div className="right-column">
-        <p className="sidenote">This is a sidenote.</p>
-        <p className="sidenote">Another sidenote.</p>
+        <p className="sidenote">Change the wallpaper using the "Prev" and "Next" buttons!</p>
+        <p className="sidenote">News source: News API</p>
       </div>
 
       <div className="content">
         <WeatherCard />
-        <CurrentTime />
         <NewsFeed />
       </div>
     </div>

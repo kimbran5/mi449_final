@@ -16,7 +16,7 @@ function NewsFeed() {
 
   return (
     <div className="newsfeed-container">
-      <h2>Top Headlines (News API)</h2>
+      <h2>Top Headlines</h2>
       <div className="newsfeed-scrollable">
         {news.map((article, index) => (
           <div key={index} className="newsfeed-article">

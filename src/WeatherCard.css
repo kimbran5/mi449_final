@@ -1,32 +1,40 @@
 .weather-card {
-    background-color: blue;
+    background-color: aqua;
+    background-color: rgba(0, 0, 0, .25);
+    color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 24px;
     width: 300px;
-  }
+    margin: auto;
+    position: absolute;
+    top: 44%;
+    left: 79%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
   
-  .weather-card-header {
+.weather-card-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 24px;
-  }
+}
   
-  .weather-card-header .city {
+.weather-card-header .city {
     font-size: 24px;
     font-weight: bold;
-  }
+}
   
-  .weather-card-header .temperature {
+.weather-card-header .temperature {
     font-size: 48px;
     font-weight: bold;
-  }
+}
   
-  .weather-card-body {
+.weather-card-body {
     font-size: 18px;
-  }
+}
   
-  .weather-card-body .description {
+.weather-card-body .description {
     margin-bottom: 24px;
-  }
+}

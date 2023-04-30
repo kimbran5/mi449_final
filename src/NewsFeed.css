@@ -1,28 +1,31 @@
 .newsfeed-container {
     width: 100%;
     margin-top: 30px;
-  }
+}
   
-  .newsfeed-scrollable {
+.newsfeed-scrollable {
     max-height: 400px;
     overflow: scroll;
-  }
+}
   
-  .newsfeed-article {
+.newsfeed-article {
     margin: 20px 0;
-  }
+}
   
-  .newsfeed-article a {
+.newsfeed-article a {
     font-weight: bold;
     color: #4285F3;
     text-decoration: none;
-  }
+}
   
-  .newsfeed-article a:hover {
+.newsfeed-article a:hover {
     text-decoration: underline;
-  }
+}
   
-  .newsfeed-article p {
+.newsfeed-article p {
     margin: 5px 0;
-  }
+}
   
+h2 {
+  text-align: center;
+}
